@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijith Mengaram | Lead Software Engineer</title>
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Abhijith Mengaram | Lead Software Engineer">
-    <meta name="twitter:description" content="Senior Software Engineer & Distributed Systems Architect.">
-    <meta name="twitter:image" content="https://abhijithmengaram.com/assets/images/me.jpg">
+    <title>Abhijith Mengaram | Systems Architect & Lead Engineer</title>
     
     <link rel="icon" type="image/png" href="assets/icons/am_logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -15,57 +11,43 @@
     <style>
         :root {
             --primary-red: #d32f2f;
-            --text-dark: #0f172a; /* Slate Dark - more premium than black */
-            --text-muted: #64748b;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-pure: #ffffff;
             --card-bg: rgba(255, 255, 255, 0.85);
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --border: rgba(211, 47, 47, 0.1);
+            --glass-border: rgba(211, 47, 47, 0.15);
         }
 
         body {
             margin: 0;
-            background-color: #ffffff;
+            background-color: var(--bg-pure);
             color: var(--text-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* FIXED GRAPH BACKGROUND */
         #graph-canvas {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            opacity: 0.7; /* High visibility for the graph */
-            background: radial-gradient(circle at 50% 50%, #fff, #f8f8f8);
+            background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
         }
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 1; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
 
-        /* LOGO WITH BLURRED BACKGROUND */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
+        nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
+        
         .logo-glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             padding: 12px 24px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            display: flex;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 18px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(211, 47, 47, 0.08);
         }
 
-        /* BENTO GRID */
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -75,38 +57,36 @@
 
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid var(--border);
-            border-radius: 28px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
             padding: 35px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             border-color: var(--primary-red);
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 20px 40px rgba(211, 47, 47, 0.08);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 25px 50px rgba(211, 47, 47, 0.12);
         }
 
-        /* TYPOGRAPHY */
-        h1 { font-size: 3.2rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.05em; line-height: 1.1; color: var(--text-dark); }
-        h2 { font-size: 1rem; color: var(--primary-red); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 15px; }
-        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--primary-red); font-weight: 600; }
-        .metric { font-size: 4rem; font-weight: 800; color: var(--primary-red); line-height: 1; }
+        h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.05em; line-height: 1.05; }
+        h2 { font-size: 0.9rem; color: var(--primary-red); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 800; margin-bottom: 20px; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary-red); font-weight: 600; }
+        .metric { font-size: 4.5rem; font-weight: 800; color: var(--primary-red); line-height: 1; letter-spacing: -0.05em; }
         
-        /* ASSETS */
-        .photo-wrapper img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.1); object-fit: cover; }
+        .photo-wrapper img { width: 160px; height: 160px; border-radius: 50%; border: 6px solid #fff; box-shadow: 0 15px 35px rgba(0,0,0,0.1); object-fit: cover; }
         .hero-flex { display: flex; align-items: center; gap: 40px; }
-        .social-icons { display: flex; gap: 15px; margin-top: 25px; }
-        .social-icons img { width: 38px; height: 38px; filter: grayscale(1); transition: 0.3s; opacity: 0.7; }
-        .social-icons img:hover { filter: grayscale(0); opacity: 1; transform: translateY(-3px); }
-        
-        .tag { background: #fff1f1; color: var(--primary-red); padding: 6px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 10px; display: inline-block; }
+        .tag { background: #fff1f1; color: var(--primary-red); padding: 8px 16px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; margin-right: 8px; margin-bottom: 10px; display: inline-block; border: 1px solid rgba(211, 47, 47, 0.05); }
 
-        /* GRID LOGIC */
+        .btn-resume {
+            background: var(--primary-red); color: white; padding: 14px 32px; border-radius: 14px;
+            text-decoration: none; display: inline-block; font-weight: 700; margin-top: 25px; transition: 0.3s;
+        }
+
         .span-3 { grid-column: span 3; }
         .span-2 { grid-column: span 2; }
         .row-2 { grid-row: span 2; }
@@ -116,134 +96,142 @@
             .bento-grid { grid-template-columns: 1fr; }
             .span-3, .span-2, .row-2 { grid-column: span 1; grid-row: span 1; }
             .hero-flex { flex-direction: column-reverse; text-align: center; }
-            h1 { font-size: 2.5rem; }
+            h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
 <body>
 
-<div id="graph-canvas"></div>
+<canvas id="graph-canvas"></canvas>
 
 <div class="container">
     <nav>
         <div class="logo-glass">
-            <img src="assets/icons/am_logo.png" alt="AM Logo" style="height: 32px;">
+            <img src="assets/icons/am_logo.png" alt="AM" style="height: 35px;">
         </div>
-        <span class="mono">Cary, NC • EST Timezone</span>
+        <span class="mono">Research Triangle, NC • Systems Architect</span>
     </nav>
 
     <main class="bento-grid">
         <div class="card span-3">
             <div class="hero-flex">
                 <div class="text-side">
-                    <span class="mono">Senior Software Engineer & Leader</span>
+                    <span class="mono">Senior Staff Engineer & Lead IC</span>
                     <h1>Abhijith Mengaram</h1>
-                    <p style="font-size: 1.1rem; color: var(--text-muted);">10+ years architecting distributed enterprise systems and guiding global engineering teams. Specialized in cloud-native strategy and <strong>operational excellence</strong>.</p>
+                    <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 650px;">Architecting <strong>distributed enterprise systems</strong> and setting technical standards for global-scale platforms.</p>
                     <div style="margin-top: 20px;">
-                        <span class="tag">MS Computer Science</span>
-                        <span class="tag">MS Mgmt Info Tech</span>
                         <span class="tag">Distributed Systems</span>
+                        <span class="tag">Event-Driven Architecture</span>
+                        <span class="tag">LLM Orchestration</span>
                     </div>
                 </div>
                 <div class="photo-wrapper">
-                    <img src="assets/images/me.jpg" alt="Abhijith Mengaram">
+                    <img src="assets/images/me.jpg" alt="Abhijith">
                 </div>
             </div>
         </div>
 
         <div class="card center">
-            <span class="metric">5</span>
-            <p style="font-weight: 700; margin: 10px 0 5px;">Engineers Promoted</p>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Mentored talent into Lead roles.</p>
+            <span class="metric">5×</span>
+            <p style="font-weight: 800; margin: 10px 0 5px;">Velocity Impact</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Technical mentorship elevating teams to Lead levels.</p>
         </div>
 
         <div class="card span-2 row-2">
-            <h2>Engineering Management</h2>
-            <p>Managed global engineering teams, aligning technical strategy with high-stakes product roadmaps.</p>
-            <p><strong>Impact Highlights:</strong></p>
-            <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                <li>Leading engineering for underwriting platform supporting <strong>$100M+ annual revenue</strong>.</li>
-                <li>Achieved <strong>4.5x performance gain</strong> in cloud workloads, optimizing GCP compute spend.</li>
-                <li>Reduced system downtime by 30% via modernized observability.</li>
+            <h2>Engineering Impact</h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">Directing technical blueprints for high-stakes infrastructure.</p>
+            <ul style="padding-left: 20px; color: var(--text-dark); font-size: 1rem; line-height: 2; font-weight: 500; margin-top: 20px;">
+                <li>Architecture Lead for Underwriting (<strong>$100M+ Revenue</strong>).</li>
+                <li>Engineered <strong>4.5x performance gains</strong> in GCP workloads.</li>
+                <li>Standardized observability, reducing downtime by <strong>30%</strong>.</li>
             </ul>
-            <a href="assets/resume/test_Abhijith_Mengaram_2025.pdf" class="tag" style="background: var(--primary-red); color: white; padding: 12px 24px; text-decoration: none; margin-top: 20px;">Download Strategy Resume →</a>
+            <a href="assets/resume/Abhijith_Technical_Resume.pdf" class="btn-resume">Download Technical Resume →</a>
         </div>
 
         <div class="card center">
             <span class="metric">45%</span>
-            <p style="font-weight: 700; margin: 10px 0 5px;">Latency Reduction</p>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Optimized critical APIs for scale.</p>
+            <p style="font-weight: 800; margin: 10px 0 5px;">Latency Opt.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Refactored critical core API bottlenecks.</p>
         </div>
 
         <div class="card center">
             <span class="metric">50%</span>
-            <p style="font-weight: 700; margin: 10px 0 5px;">Tech Debt Reduction</p>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Strategic refactoring for speed.</p>
+            <p style="font-weight: 800; margin: 10px 0 5px;">Debt Reduction</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Strategic refactoring of legacy backend.</p>
         </div>
 
         <div class="card span-2">
-            <h2>Connect & Insights</h2>
-            <p style="color: var(--text-muted);">Discussing Distributed Systems and Team Leadership.</p>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/abhijith-mengaram" target="_blank"><img src="assets/icons/linkedin_logo.svg" alt="LinkedIn"></a>
-                <a href="https://github.com/AbhijithMengaram" target="_blank"><img src="assets/icons/github_logo.svg" alt="GitHub"></a>
-                <a href="https://medium.com/@abhijithmengaram" target="_blank"><img src="assets/icons/medium_logo.svg" alt="Medium"></a>
+            <h2>Technical Ecosystem</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 5px;">
+                <div>
+                    <span class="mono" style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted);">Backend</span>
+                    <p style="font-size: 0.85rem; margin: 3px 0; font-weight: 600;">Java, Go, Python, gRPC</p>
+                </div>
+                <div>
+                    <span class="mono" style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted);">Infrastructure</span>
+                    <p style="font-size: 0.85rem; margin: 3px 0; font-weight: 600;">GCP, AWS, K8s, Terraform</p>
+                </div>
+                <div>
+                    <span class="mono" style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted);">Data</span>
+                    <p style="font-size: 0.85rem; margin: 3px 0; font-weight: 600;">PostgreSQL, Redis, Kafka</p>
+                </div>
+                <div>
+                    <span class="mono" style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted);">Emerging</span>
+                    <p style="font-size: 0.85rem; margin: 3px 0; font-weight: 600;">LLMs, Vector DBs, LangChain</p>
+                </div>
             </div>
+        </div>
+
+        <div class="card span-2">
+            <h2>Systems Design Leadership</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Scaling engineering culture via <strong>RFC authorship</strong>, <strong>design reviews</strong>, and productionizing AI infrastructure.</p>
         </div>
     </main>
 
     <footer style="text-align: center; margin-top: 80px; padding-bottom: 40px; font-size: 0.85rem; color: var(--text-muted);">
-        <p>&copy; 2026 Abhijith Mengaram • MS CS, MS MIT • Architected for Scale</p>
+        <p>&copy; 2026 Abhijith Mengaram • MS Computer Science • Architected for Scale</p>
     </footer>
 </div>
 
 <script>
-    const canvas = document.createElement('canvas');
+    const canvas = document.getElementById('graph-canvas');
     const ctx = canvas.getContext('2d');
-    document.getElementById('graph-canvas').appendChild(canvas);
-    
     let particles = [];
     function init() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        // Adjusted density for better visibility
-        particles = Array.from({ length: 60 }, () => ({
+        particles = Array.from({ length: 65 }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             vx: (Math.random() - 0.5) * 0.4,
-            vy: (Math.random() - 0.5) * 0.4
+            vy: (Math.random() - 0.5) * 0.4,
+            size: Math.random() * 2 + 2.5
         }));
     }
-    
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
         particles.forEach((p, i) => {
             p.x += p.vx; p.y += p.vy;
             if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
             if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-            
             ctx.beginPath();
-            ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(211, 47, 47, 0.4)'; // Darker dots
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(211, 47, 47, 0.6)'; 
+            ctx.shadowBlur = 10; ctx.shadowColor = 'rgba(211, 47, 47, 0.4)';
             ctx.fill();
-    
+            ctx.shadowBlur = 0;
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                if (dist < 180) {
-                    ctx.beginPath();
-                    ctx.lineWidth = 1; // Thicker lines
-                    ctx.strokeStyle = `rgba(211, 47, 47, ${0.15 * (1 - dist/180)})`;
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.stroke();
+                if (dist < 220) {
+                    ctx.beginPath(); ctx.lineWidth = 1.6;
+                    ctx.strokeStyle = `rgba(211, 47, 47, ${0.28 * (1 - dist / 220)})`;
+                    ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
                 }
             }
         });
         requestAnimationFrame(draw);
     }
-    
     window.addEventListener('resize', init);
     init(); draw();
 </script>
