@@ -3,92 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhijith Mengaram | Senior Software Engineer</title>
+  <title>Abhijith Mengaram | Staff Software Engineer</title>
+  <meta name="description" content="Distributed Systems Architect specializing in Cloud-Native Infra and AI Orchestration.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/icons/am_logo.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Section -->
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="assets/icons/am_logo.svg" alt="AM Logo" class="nav-logo">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#skills">Stack</a>
+        <a href="assets/Abhijith_Mengaram_Resume.pdf" class="nav-btn">Resume</a>
+      </div>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="hero-content">
-      <img src="assets/images/me.jpg" alt="Abhijith Mengaram" class="hero-photo">
+      <div class="photo-container">
+        <img src="assets/images/me.jpg" alt="Abhijith Mengaram" class="hero-photo">
+        <div class="status-badge">● Available for Strategic Roles</div>
+      </div>
       <div class="hero-text">
-        <img src="assets/icons/am_logo.svg" alt="AM Logo" class="hero-logo">
         <h1>Abhijith Mengaram</h1>
-        <h2>Senior Software Engineer · Distributed Systems · Cloud</h2>
-        <p>Building scalable, fault-tolerant backend systems that power global applications.</p>
-        <div class="cta">
-          <a href="#contact" class="btn primary">Contact Me</a>
-          <a href="assets/Abhijith_Mengaram_Resume.pdf" class="btn secondary">View Resume</a>
+        <p class="tagline">Staff Engineer • Distributed Systems • AI Infrastructure</p>
+        <p class="bio-short">Architecting high-throughput backends and <strong>autonomous agentic workflows</strong> for global-scale platforms.</p>
+        <div class="cta-group">
+          <a href="mailto:your-email@example.com" class="btn primary">Start a Conversation</a>
+          <a href="https://github.com/AbhijithMengaram" class="btn outline">View Source</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>👋 About Me</h2>
-    <p>I'm a Senior Software Engineer with 10+ years of experience designing high-scale distributed systems. I specialize in cloud-native architectures, event-driven systems, and building reliable, maintainable APIs.</p>
-    <ul class="highlights">
-      <li>Designed systems processing 1M+ messages/sec</li>
-      <li>Built microservices in Java & Kubernetes</li>
-      <li>Led migration from monolith to distributed architecture</li>
-      <li>Mentored engineers and drove cross-team API design</li>
-    </ul>
+  <section class="metrics">
+    <div class="metric-item"><strong>1M+</strong><span>Req/Sec Managed</span></div>
+    <div class="metric-item"><strong>40%</strong><span>Infra Cost Reduction</span></div>
+    <div class="metric-item"><strong>12+</strong><span>Years Experience</span></div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="section">
-    <h2>🚀 Projects & Highlights</h2>
+    <div class="section-header">
+      <h2><span>01.</span> Selected Projects</h2>
+    </div>
     <div class="project-grid">
-      <div class="project-card">
-        <h3>Global Messaging Platform</h3>
-        <p>Distributed messaging system using Kafka handling 10M+ messages/day.</p>
-        <a href="https://github.com/AbhijithMengaram/project1" class="btn tertiary">View on GitHub</a>
+      <article class="project-card">
+        <div class="project-tags">Kafka • Go • Kubernetes</div>
+        <h3>Global Event Mesh</h3>
+        <p>Engineered a distributed backbone processing 10B+ monthly events with 99.99% uptime during peak cloud migrations.</p>
+        <a href="#" class="project-link">Read Case Study →</a>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-tags">LLMOps • Python • VectorDB</div>
+        <h3>AI Agent Orchestrator</h3>
+        <p>Developed a custom middleware for orchestrating LLM tool-calling in production, reducing inference latency by 35%.</p>
+        <a href="#" class="project-link">View Repo →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="section dark">
+    <h2>🛠 Technical Ecosystem</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Core Systems</h4>
+        <p>Java (JVM Internals), Go, Rust, Distributed Actor Models</p>
       </div>
-      <div class="project-card">
-        <h3>Cloud Migration Initiative</h3>
-        <p>Migrated monolith services to GCP + Kubernetes, improving scalability by 40%.</p>
-        <a href="https://github.com/AbhijithMengaram/project2" class="btn tertiary">View on GitHub</a>
+      <div class="skill-group">
+        <h4>Data & AI</h4>
+        <p>PostgreSQL, Kafka, Pinecone, LangChain, Spark</p>
+      </div>
+      <div class="skill-group">
+        <h4>Infrastructure</h4>
+        <p>GCP, Kubernetes, Terraform, Service Mesh (Istio)</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>🛠 Tech Stack</h2>
-    <div class="skills-list">
-      <span>Java / JVM Internals</span>
-      <span>Distributed Systems & Kafka</span>
-      <span>PostgreSQL / MongoDB</span>
-      <span>GCP / Kubernetes</span>
-      <span>System Design & Architecture</span>
-      <span>Machine Learning / AI Exploration</span>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <h2>📬 Contact & Social</h2>
-    <a href="assets/resume/Abhijith_Mengaram_Resume.pdf" class="btn primary">Download Resume</a>
-    <div class="social">
-      <a href="https://linkedin.com/in/abhijithmengaram" title="LinkedIn">
-        <img src="assets/icons/linkedin_logo.svg" width="40" height="40">
-      </a>
-      <a href="https://medium.com/@abhijithmengaram" title="Medium">
-        <img src="assets/icons/medium_logo.svg" width="40" height="40">
-      </a>
-      <a href="https://github.com/AbhijithMengaram" title="GitHub">
-        <img src="assets/icons/github_logo.svg" width="40" height="40">
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <img src="assets/icons/am_logo.svg" alt="AM Logo" class="footer-logo">
-    <p>&copy; 2013 Abhijith Mengaram.</p>
+    <div class="footer-content">
+      <p>&copy; 2026 Abhijith Mengaram. Built with minimal GitHub Pages.</p>
+      <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Medium</a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
