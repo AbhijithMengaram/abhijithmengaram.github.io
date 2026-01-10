@@ -1,4 +1,18 @@
-/* Hero Section Red */
+/* Reset & Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+/* Hero */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -9,71 +23,169 @@
 .hero-logo {
   width: 100px;
   margin-bottom: 20px;
-  filter: brightness(0) invert(1); /* make AM logo white */
 }
 
-.hero h1, .hero h2, .hero p {
-  color: #fff;
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-/* Buttons */
+.hero h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.cta .btn {
+  padding: 12px 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
 .btn.primary {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #F44336;
 }
 
 .btn.primary:hover {
-  background-color: #ffe6e6;
+  background-color: #ffe5e0;
 }
 
 .btn.secondary {
-  background-color: #fff;
-  color: #F44336;
-  border: 2px solid #fff;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .btn.secondary:hover {
-  background-color: #ffe6e6;
-  border-color: #F44336;
+  background-color: rgba(255,255,255,0.1);
 }
 
-/* Section Backgrounds */
-#about, #skills, #contact {
-  background-color: #fff;
-  color: #111;
+.btn.tertiary {
+  background-color: #F44336;
+  color: #fff;
 }
 
-#projects {
-  background-color: #F8F8F8;
+.btn.tertiary:hover {
+  background-color: #d32f2f;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlights {
+  list-style: none;
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.highlights li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.highlights li::before {
+  content: '•';
+  color: #F44336;
+  position: absolute;
+  left: 0;
 }
 
 /* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
 .project-card {
-  background-color: #fff;
-  border: 1px solid #F44336;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
 }
 
-/* Skills Pills */
-.skills-list li {
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skills-list span {
   background-color: #F44336;
   color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Contact / Social */
+.contact-section .social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-section .social img {
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.contact-section .social img:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 40px 20px;
-  background-color: #F44336;
-  color: #fff;
+  background-color: #F8F8F8;
+  color: #555;
 }
 
 footer .footer-logo {
-  filter: brightness(0) invert(1); /* AM logo white */
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1rem; }
 }
