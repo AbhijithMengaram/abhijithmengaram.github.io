@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijith Mengaram | Lead Software Enginer & Senior IC</title>
+    <title>Abhijith Mengaram | Lead Software Engineer & Senior IC</title>
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='15' y='65' font-family='monospace' font-size='45' font-weight='800' fill='%2338bdf8'>&gt;AM</text></svg>">
     
@@ -79,6 +79,16 @@
         .tech-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
         .tech-list li::before { content: "→"; color: var(--accent-blue); font-weight: bold; }
 
+        .medium-link {
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+            transition: 0.2s;
+        }
+        .medium-link:hover { padding-left: 5px; }
+        .medium-link:last-child { border-bottom: none; }
+
         .btn-primary {
             background: var(--accent-blue); color: var(--bg-deep); padding: 12px 24px; border-radius: 8px;
             text-decoration: none; display: inline-block; font-weight: 800; margin-top: 15px; font-size: 0.8rem;
@@ -137,7 +147,7 @@
         <div class="card span-3">
             <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 300px;">
-                    <span class="mono">Principal Software Engineer & Senior IC</span>
+                    <span class="mono">Senior Lead Software Engineer & Senior IC</span>
                     <h1>Abhijith Mengaram</h1>
                     <p style="color: var(--text-dim); font-size: 1.1rem; margin-top: 10px; line-height: 1.6;">
                         Building high-concurrency <strong>distributed systems</strong> and high-trust engineering cultures. I bridge technical strategy with organizational growth to deliver enterprise-grade excellence.
@@ -149,24 +159,20 @@
             </div>
         </div>
 
-        <div class="card row-2">
+        <div class="card">
             <h2>Technical DNA</h2>
-            <div style="font-size: 0.85rem; line-height: 2.2;">
-                <div style="margin-bottom: 15px;">
-                    <strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">LANGUAGES</strong>
+            <div style="font-size: 0.85rem; line-height: 2.1;">
+                <div style="margin-bottom: 12px;">
+                    <strong style="display:block; font-size: 0.65rem; color: var(--text-dim);">LANGUAGES</strong>
                     Java / Go / Python
                 </div>
-                <div style="margin-bottom: 15px;">
-                    <strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">CLOUD & INFRA</strong>
+                <div style="margin-bottom: 12px;">
+                    <strong style="display:block; font-size: 0.65rem; color: var(--text-dim);">INFRA</strong>
                     GCP / AWS / K8s / Terraform
                 </div>
-                <div style="margin-bottom: 15px;">
-                    <strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">DATA SYSTEMS</strong>
-                    Kafka / Redis / SQL / MongoDB
-                </div>
                 <div>
-                    <strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">SPECIALIZATION</strong>
-                    Distributed Systems / LLM
+                    <strong style="display:block; font-size: 0.65rem; color: var(--text-dim);">SYSTEMS</strong>
+                    Kafka / Redis / SQL / MongoDB
                 </div>
             </div>
         </div>
@@ -175,24 +181,44 @@
             <h2>Experience & Delivery</h2>
             <p style="color: var(--text-dim); font-size: 0.95rem;">Architecting for scale and organizational impact.</p>
             <ul class="tech-list">
-                <li>Technical lead for a <strong>$250M annual revenue</strong> platforms.</li>
-                <li>Architected event-driven systems achieving <strong>4.5x performance gains</strong>.</li>
-                <li>Strategic integration of <strong>LLM capabilities</strong> for production workflows.</li>
+                <li>Technical lead for multiple $200M annual revenue platforms.</li>
+                <li>Architected event-driven systems achieving 4.5x performance gains.</li>
+                <li>Strategic integration of AI/ML capabilities for production workflows.</li>
                 <li>Leading the RFC process for cross-functional high-concurrency microservices.</li>
             </ul>
             <a href="resume.pdf" class="btn-primary" target="_blank">View Technical Dossier</a>
         </div>
 
+        <div class="card row-2">
+            <h2>Technical Writing</h2>
+            <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">Insights on architecture and scale.</p>
+            
+            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
+                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">Data Warehousing Strategy</div>
+                <div class="mono" style="font-size: 0.65rem; margin-top: 4px;">READ ARTICLE →</div>
+            </a>
+            
+            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
+                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">Event-Driven Performance</div>
+                <div class="mono" style="font-size: 0.65rem; margin-top: 4px;">READ ARTICLE →</div>
+            </a>
+            
+            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
+                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">Mentorship & Culture</div>
+                <div class="mono" style="font-size: 0.65rem; margin-top: 4px;">READ ARTICLE →</div>
+            </a>
+        </div>
+
         <div class="card center">
             <div style="font-size: 2rem; margin-bottom: 8px;">📉</div>
             <p style="font-weight: 800; color: var(--text-bright); margin: 0;">Latency P99</p>
-            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">Architecting high-availability distributed systems.</p>
+            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">High-availability systems.</p>
         </div>
 
         <div class="card center">
             <div style="font-size: 2rem; margin-bottom: 8px;">🌱</div>
             <p style="font-weight: 800; color: var(--text-bright); margin: 0;">Growth</p>
-            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">Coaching & mentoring engineers to lead levels.</p>
+            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">Mentoring engineers to Lead.</p>
         </div>
 
         <div class="card span-2">
@@ -205,7 +231,7 @@
         <div class="card">
             <div style="font-size: 1.8rem; margin-bottom: 8px;">🏗️</div>
             <h2>Modernization</h2>
-            <p style="font-size: 0.75rem; color: var(--text-dim); line-height: 1.4;">Decoupling legacy debt with domain-driven design.</p>
+            <p style="font-size: 0.75rem; color: var(--text-dim); line-height: 1.4;">Decoupling legacy debt via DDD.</p>
         </div>
 
     </main>
@@ -232,8 +258,8 @@
 
 <script>
     // 1. Tab Switching Script
-    window.onblur = function () { document.title = "Ready for the next challenge?"; }
-    window.onfocus = function () { document.title = "Abhijith Mengaram | Principal SE"; }
+    window.onblur = function () { document.title = "Ready to collaborate?"; }
+    window.onfocus = function () { document.title = "Abhijith Mengaram | Lead SE"; }
 
     // 2. Neural Graph Background
     const canvas = document.getElementById('graph-canvas');
