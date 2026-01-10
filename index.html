@@ -1,101 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhijith Mengaram | Staff Software Engineer</title>
-  <meta name="description" content="Distributed Systems Architect specializing in Cloud-Native Infra and AI Orchestration.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/icons/am_logo.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijith Mengaram | Staff Engineer & Engineering Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8f9fa;           /* Soft Canvas White */
+            --card: #ffffff;
+            --primary-red: #d32f2f;  /* Sophisticated Crimson */
+            --text-dark: #1a1a1a;
+            --text-muted: #636363;
+            --border: #e9ecef;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Nav/Logo Area */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .am-logo {
+            height: 40px;
+            /* Filter to make your logo match the primary-red exactly */
+            filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(-50deg) saturate(5);
+        }
+
+        /* Bento Grid Layout */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(160px, auto);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 30px rgba(211, 47, 47, 0.08);
+        }
+
+        /* Layout Spans */
+        .span-2 { grid-column: span 2; }
+        .span-3 { grid-column: span 3; }
+        .row-2 { grid-row: span 2; }
+
+        /* Typography */
+        h1 { font-size: 2.5rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.04em; }
+        h2 { font-size: 1.25rem; color: var(--primary-red); margin-bottom: 10px; }
+        p { color: var(--text-muted); font-size: 1rem; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-transform: uppercase; color: var(--primary-red); }
+
+        /* Metrics */
+        .metric { font-size: 3rem; font-weight: 800; color: var(--text-dark); display: block; margin-bottom: 5px; }
+
+        /* Buttons & Tags */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: opacity 0.2s;
+        }
+
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { background: #fef2f2; color: var(--primary-red); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; border: 1px solid #fee2e2; }
+
+        /* Mobile Optimization */
+        @media (max-width: 850px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .span-2, .span-3, .row-2 { grid-column: span 1; grid-row: span 1; }
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <img src="assets/icons/am_logo.svg" alt="AM Logo" class="nav-logo">
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Work</a>
-        <a href="#skills">Stack</a>
-        <a href="assets/Abhijith_Mengaram_Resume.pdf" class="nav-btn">Resume</a>
-      </div>
-    </div>
-  </nav>
+<div class="container">
+    <nav>
+        <img src="assets/icons/am_logo.svg" alt="AM Logo" class="am-logo">
+        <a href="assets/Abhijith_Mengaram_Resume.pdf" class="mono" style="text-decoration: none;">[ Download Resume ]</a>
+    </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <div class="photo-container">
-        <img src="assets/images/me.jpg" alt="Abhijith Mengaram" class="hero-photo">
-        <div class="status-badge">● Available for Strategic Roles</div>
-      </div>
-      <div class="hero-text">
-        <h1>Abhijith Mengaram</h1>
-        <p class="tagline">Staff Engineer • Distributed Systems • AI Infrastructure</p>
-        <p class="bio-short">Architecting high-throughput backends and <strong>autonomous agentic workflows</strong> for global-scale platforms.</p>
-        <div class="cta-group">
-          <a href="mailto:your-email@example.com" class="btn primary">Start a Conversation</a>
-          <a href="https://github.com/AbhijithMengaram" class="btn outline">View Source</a>
+    <main class="bento-grid">
+        
+        <div class="card span-3">
+            <span class="mono">Staff Software Engineer</span>
+            <h1>Abhijith Mengaram</h1>
+            <p>Scaling high-throughput distributed systems and fostering engineering excellence. Specializing in JVM internals, Event-Driven Architecture, and transition leadership from Senior Engineer to Management.</p>
+            <div class="tag-cloud">
+                <span class="tag">System Design</span>
+                <span class="tag">Team Mentorship</span>
+                <span class="tag">Cloud Strategy</span>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <section class="metrics">
-    <div class="metric-item"><strong>1M+</strong><span>Req/Sec Managed</span></div>
-    <div class="metric-item"><strong>40%</strong><span>Infra Cost Reduction</span></div>
-    <div class="metric-item"><strong>12+</strong><span>Years Experience</span></div>
-  </section>
+        <div class="card highlight">
+            <span class="metric">15+</span>
+            <p>Engineers Mentored into Senior/Lead roles</p>
+        </div>
 
-  <section id="projects" class="section">
-    <div class="section-header">
-      <h2><span>01.</span> Selected Projects</h2>
-    </div>
-    <div class="project-grid">
-      <article class="project-card">
-        <div class="project-tags">Kafka • Go • Kubernetes</div>
-        <h3>Global Event Mesh</h3>
-        <p>Engineered a distributed backbone processing 10B+ monthly events with 99.99% uptime during peak cloud migrations.</p>
-        <a href="#" class="project-link">Read Case Study →</a>
-      </article>
+        <div class="card span-2 row-2">
+            <h2>The Technical Core</h2>
+            <p>I maintain a "hands-on" leadership style. Deep expertise in managing global scale clusters and modernizing legacy monoliths.</p>
+            <div class="tag-cloud" style="margin-top: 30px;">
+                <span class="tag">Java / Spring Boot</span>
+                <span class="tag">Go</span>
+                <span class="tag">Kafka & RabbitMQ</span>
+                <span class="tag">Kubernetes (GCP/AWS)</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Terraform</span>
+            </div>
+            <a href="https://github.com/AbhijithMengaram" class="btn">Explore GitHub</a>
+        </div>
 
-      <article class="project-card featured">
-        <div class="project-tags">LLMOps • Python • VectorDB</div>
-        <h3>AI Agent Orchestrator</h3>
-        <p>Developed a custom middleware for orchestrating LLM tool-calling in production, reducing inference latency by 35%.</p>
-        <a href="#" class="project-link">View Repo →</a>
-      </article>
-    </div>
-  </section>
+        <div class="card">
+            <span class="metric">1M+</span>
+            <p>Requests per second managed at peak scale</p>
+        </div>
 
-  <section id="skills" class="section dark">
-    <h2>🛠 Technical Ecosystem</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Core Systems</h4>
-        <p>Java (JVM Internals), Go, Rust, Distributed Actor Models</p>
-      </div>
-      <div class="skill-group">
-        <h4>Data & AI</h4>
-        <p>PostgreSQL, Kafka, Pinecone, LangChain, Spark</p>
-      </div>
-      <div class="skill-group">
-        <h4>Infrastructure</h4>
-        <p>GCP, Kubernetes, Terraform, Service Mesh (Istio)</p>
-      </div>
-    </div>
-  </section>
+        <div class="card span-2">
+            <h2>Cloud Infrastructure Migration</h2>
+            <p>Led a cross-functional squad to migrate 40+ microservices to GKE, achieving a 35% reduction in cloud spend and zero downtime.</p>
+        </div>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 Abhijith Mengaram. Built with minimal GitHub Pages.</p>
-      <div class="social-links">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Medium</a>
-      </div>
-    </div>
-  </footer>
+        <div class="card span-4" style="text-align: center; padding: 40px;">
+            <p>© 2026 Abhijith Mengaram • Built for high-performance engineering leadership.</p>
+            <div style="margin-top: 15px;">
+                <a href="https://linkedin.com/in/abhijithmengaram" class="mono" style="margin: 0 15px;">LinkedIn</a>
+                <a href="https://medium.com/@abhijithmengaram" class="mono" style="margin: 0 15px;">Medium</a>
+                <a href="mailto:hello@abhijithmengaram.com" class="mono" style="margin: 0 15px;">Email</a>
+            </div>
+        </div>
+
+    </main>
+</div>
 
 </body>
 </html>
