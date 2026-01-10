@@ -79,12 +79,6 @@
         .tech-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
         .tech-list li::before { content: "→"; color: var(--accent-blue); font-weight: bold; }
 
-        .medium-link {
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-        }
-
         .btn-primary {
             background: var(--accent-blue); color: var(--bg-deep); padding: 12px 24px; border-radius: 8px;
             text-decoration: none; display: inline-block; font-weight: 800; margin-top: 15px; font-size: 0.8rem;
@@ -94,7 +88,6 @@
         .span-3 { grid-column: span 3; }
         .span-2 { grid-column: span 2; }
         .row-2 { grid-row: span 2; }
-        .center { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
         .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
         .social-card {
@@ -189,32 +182,30 @@
         </div>
 
         <div class="card row-2">
-            <h2>Medium Insights</h2>
-            <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">Technical writing and strategy.</p>
-            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
-                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">Data Warehousing Strategy</div>
-                <div class="mono" style="font-size: 0.65rem;">READ ARTICLE →</div>
-            </a>
-            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
-                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">Event-Driven Systems</div>
-                <div class="mono" style="font-size: 0.65rem;">READ ARTICLE →</div>
-            </a>
-            <a href="https://medium.com/@abhijith.mengaram" target="_blank" class="medium-link">
-                <div style="color: var(--text-bright); font-size: 0.9rem; font-weight: 600;">The Engineering Roadmap</div>
-                <div class="mono" style="font-size: 0.65rem;">READ ARTICLE →</div>
-            </a>
-        </div>
+            <h2>System Impact</h2>
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                    <span style="font-size: 1.2rem;">📉</span>
+                    <strong style="font-size: 0.85rem; color: var(--text-bright);">Latency P99</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-left: 30px;">Architecting high-availability distributed systems for peak performance.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                    <span style="font-size: 1.2rem;">🏗️</span>
+                    <strong style="font-size: 0.85rem; color: var(--text-bright);">Modernization</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-left: 30px;">Decoupling legacy debt with domain-driven design and scalable architecture.</p>
+            </div>
 
-        <div class="card center">
-            <div style="font-size: 2rem; margin-bottom: 8px;">📉</div>
-            <p style="font-weight: 800; color: var(--text-bright); margin: 0;">Latency P99</p>
-            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">Architecting high-availability systems.</p>
-        </div>
-
-        <div class="card center">
-            <div style="font-size: 2rem; margin-bottom: 8px;">🌱</div>
-            <p style="font-weight: 800; color: var(--text-bright); margin: 0;">Growth</p>
-            <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 5px; line-height: 1.3;">Coaching & mentoring engineers.</p>
+            <div>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                    <span style="font-size: 1.2rem;">🌱</span>
+                    <strong style="font-size: 0.85rem; color: var(--text-bright);">Growth</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-left: 30px;">Coaching and mentoring engineers to Lead levels through technical excellence.</p>
+            </div>
         </div>
 
         <div class="card span-2">
@@ -225,16 +216,24 @@
         </div>
 
         <div class="card">
-            <div style="font-size: 1.8rem; margin-bottom: 8px;">🏗️</div>
-            <h2>Modernization</h2>
-            <p style="font-size: 0.75rem; color: var(--text-dim); line-height: 1.4;">Decoupling legacy debt with domain-driven design.</p>
+            <h2>Medium Insights</h2>
+            <div style="font-size: 0.8rem; line-height: 1.6;">
+                <a href="https://medium.com/@abhijith.mengaram" target="_blank" style="text-decoration:none; display:block; margin-bottom:10px;">
+                    <span style="color: var(--text-bright); font-weight: 600;">Data Strategy →</span><br>
+                    <span style="color: var(--accent-blue); font-size: 0.65rem;" class="mono">SYSTEM DESIGN</span>
+                </a>
+                <a href="https://medium.com/@abhijith.mengaram" target="_blank" style="text-decoration:none; display:block;">
+                    <span style="color: var(--text-bright); font-weight: 600;">Event-Driven →</span><br>
+                    <span style="color: var(--accent-blue); font-size: 0.65rem;" class="mono">ARCHITECTURE</span>
+                </a>
+            </div>
         </div>
 
         <div class="card">
             <h2>Context & Impact</h2>
             <div style="font-size: 0.8rem; line-height: 1.6;">
                 <p style="margin: 0 0 10px 0;"><span style="color: var(--accent-blue); font-weight: 800;">CERTS:</span> AWS Architect • CKAD</p>
-                <p style="margin: 0;"><span style="color: var(--accent-blue); font-weight: 800;">FACTS:</span> 🏃 13.1 Finisher. <br>Refactoring a former 6-pack (High Tech Debt).</p>
+                <p style="margin: 0;"><span style="color: var(--accent-blue); font-weight: 800;">FACTS:</span> 🏃 13.1 Finisher. <br>Refactoring former 6-pack (Tech Debt).</p>
             </div>
         </div>
 
@@ -265,7 +264,7 @@
     window.onblur = function () { document.title = "Ready to collaborate?"; }
     window.onfocus = function () { document.title = "Abhijith Mengaram | Lead SE"; }
 
-    // Background Animation
+    // Animation
     const canvas = document.getElementById('graph-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
