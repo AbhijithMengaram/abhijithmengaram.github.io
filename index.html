@@ -3,83 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijith Mengaram | Software Engineer & Engineering Lead</title>
+    <title>Abhijith Mengaram | Engineering Leader</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 2026 MESH GRADIENT & BASE STYLES */
+        :root {
+            --primary-red: #d32f2f;
+            --text-dark: #1a1a1a;
+            --text-muted: #52525b;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --border: rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            margin: 0;
+            background-color: #fdfdfd;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(211, 47, 47, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(211, 47, 47, 0.05) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(211, 47, 47, 0.03) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+
+        /* BENTO GRID ARCHITECTURE */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-red);
+            box-shadow: 0 15px 35px rgba(211, 47, 47, 0.07);
+        }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: 3rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.04em; line-height: 1.1; }
+        h2 { font-size: 1.1rem; color: var(--primary-red); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--primary-red); }
+        .metric { font-size: 3.5rem; font-weight: 800; color: var(--primary-red); line-height: 1; }
+        
+        /* SPECIAL SECTIONS */
+        .photo-wrapper img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); object-fit: cover; }
+        .hero-flex { display: flex; align-items: center; gap: 30px; }
+        .social-icons { display: flex; gap: 12px; margin-top: 20px; }
+        .social-icons img { width: 40px; transition: 0.3s; }
+        .social-icons img:hover { transform: scale(1.1); }
+        .tag { background: #fff1f1; color: var(--primary-red); padding: 5px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; margin-right: 5px; display: inline-block; margin-bottom: 8px; }
+
+        /* GRID SPANS */
+        .span-3 { grid-column: span 3; }
+        .span-2 { grid-column: span 2; }
+        .row-2 { grid-row: span 2; }
+        .center { text-align: center; display: flex; flex-direction: column; justify-content: center; }
+
+        @media (max-width: 850px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .span-3, .span-2, .row-2 { grid-column: span 1; grid-row: span 1; }
+            .hero-flex { flex-direction: column-reverse; text-align: center; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="mesh-gradient"></div>
-
 <div class="container">
-    <nav>
-        <div class="logo-area">
-            <img src="assets/icons/am_logo_red.svg" alt="AM Logo" class="am-logo">
-            <span class="logo-text">Abhijith Mengaram</span>
-        </div>
-        <div class="nav-links">
-            <a href="https://github.com/AbhijithMengaram" target="_blank"><img src="assets/icons/github_red.svg" class="nav-icon"></a>
-            <a href="https://linkedin.com/in/abhijithmengaram" target="_blank"><img src="assets/icons/linkedin_red.svg" class="nav-icon"></a>
-            <a href="assets/Abhijith_Mengaram_2025.pdf" class="resume-btn">Resume [PDF]</a>
-        </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+        <img src="assets/icons/am_logo.svg" alt="AM Logo" style="height: 40px;">
+        <span class="mono">Cary, NC • EST Timezone</span>
     </nav>
 
     <main class="bento-grid">
-        <div class="card span-3 profile-hero">
+        <div class="card span-3">
             <div class="hero-flex">
                 <div class="text-side">
-                    <span class="mono-red">Lead Software Engineer</span>
-                    <h1>Scaling Systems,<br>Growing Teams.</h1>
-                    <p>10+ years architecting distributed, cloud-native systems. I bridge the gap between complex engineering execution and high-level business objectives.</p>
+                    <span class="mono">Staff Engineering Consultant & Leader</span>
+                    <h1>Abhijith Mengaram</h1>
+                    <p>10+ years architecting distributed enterprise systems and guiding global engineering teams. Specialized in cloud-native strategy and <strong>operational excellence</strong>[cite: 4, 6].</p>
+                    <div style="margin-top: 15px;">
+                        <span class="tag">Certified Scrum Master®</span>
+                        <span class="tag">MS Mgmt Info Tech</span>
+                        <span class="tag">Distributed Systems</span>
+                    </div>
                 </div>
                 <div class="photo-wrapper">
-                    <img src="assets/images/me.jpg" alt="Abhijith Mengaram" class="hero-photo">
+                    <img src="assets/images/me.jpg" alt="Abhijith Mengaram">
                 </div>
             </div>
         </div>
 
-        <div class="card highlight center">
-            <span class="metric">3</span>
-            <p class="label">Engineers Promoted to Lead</p>
+        <div class="card center">
+            <span class="metric">5</span>
+            <p style="font-weight: 700; margin-top: 5px;">Engineers Promoted</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Successfully coached engineers into Senior and Lead roles[cite: 30].</p>
         </div>
 
         <div class="card span-2 row-2">
-            <h2>Engineering Leadership</h2>
-            <p>Managing global engineering squads and \$100M+ revenue platforms. My focus is on <strong>Software Craftsmanship</strong> and <strong>Operational Excellence</strong>.</p>
-            <div class="tag-cloud">
-                <span class="tag">Process Re-Architecture</span>
-                <span class="tag">Technical Strategy</span>
-                <span class="tag">Mentorship</span>
-                <span class="tag">DORA Metrics</span>
-            </div>
-            <p class="quote">"I provide the 'Why' so engineers can excel at the 'How'."</p>
+            <h2>Engineering Management</h2>
+            <p>Managed global engineering teams across multiple time zones, aligning technical strategy with product roadmaps[cite: 24, 25, 26].</p>
+            <p><strong>Impact Highlights:</strong></p>
+            <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
+                <li>Lead engineering for underwriting platform supporting <strong>$100M+ annual revenue</strong>.</li>
+                <li>Achieved <strong>4.5x performance gain</strong> in cloud workloads, optimizing GCP compute spend.</li>
+                <li>Reduced system downtime by 30% via modernized architecture and observability[cite: 29].</li>
+            </ul>
+            <a href="assets/resume/Abhijith_Mengaram_2025.pdf" style="display:inline-block; margin-top: 15px; color: var(--primary-red); font-weight: 700; text-decoration: none;">Download Full Strategy Resume →</a>
         </div>
 
         <div class="card center">
-            <span class="metric-sm">$250M</span>
-            <p class="label">Platform Annual Revenue</p>
+            <span class="metric">85%</span>
+            <p style="font-weight: 700; margin-top: 5px;">Latency Reduction</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Optimized critical APIs and batch jobs for Ford Motor Co.</p>
         </div>
 
         <div class="card center">
-            <span class="metric-sm">4.5x</span>
-            <p class="label">Workload Performance Gain</p>
+            <span class="metric">35%</span>
+            <p style="font-weight: 700; margin-top: 5px;">Debt Reduction</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Strategic refactoring to enable faster feature delivery[cite: 41].</p>
         </div>
 
-        <div class="card span-2 connect-card">
-            <h2>Digital Presence</h2>
-            <p>Active on Medium and GitHub sharing insights on Distributed Systems and Engineering Management.</p>
-            <div class="social-row">
-                <a href="https://github.com/AbhijithMengaram" class="social-tile">
-                    <img src="assets/icons/github_red.svg" alt="GitHub">
-                    <span>Code</span>
-                </a>
-                <a href="https://medium.com/@abhijithmengaram" class="social-tile">
-                    <img src="assets/icons/medium_red.svg" alt="Medium">
-                    <span>Insights</span>
-                </a>
+        <div class="card span-2">
+            <h2>Connect & Insights</h2>
+            <p>Sharing expertise on Distributed Systems, LLM orchestration, and Team Leadership[cite: 12, 16].</p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/abhijith-mengaram" target="_blank"><img src="assets/icons/linkedin_red.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/AbhijithMengaram" target="_blank"><img src="assets/icons/github_red.svg" alt="GitHub"></a>
+                <a href="https://medium.com/@abhijithmengaram" target="_blank"><img src="assets/icons/medium_red.svg" alt="Medium"></a>
             </div>
         </div>
     </main>
+
+    <footer style="text-align: center; margin-top: 60px; font-size: 0.85rem; color: var(--text-muted);">
+        <p>&copy; 2026 Abhijith Mengaram. MS in Management IT[cite: 63, 64]. Architected for Scale.</p>
+    </footer
 </div>
+
 </body>
 </html>
