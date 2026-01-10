@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhijith Mengaram | Lead Software Engineer & Senior IC</title>
+    
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='15' y='65' font-family='monospace' font-size='45' font-weight='800' fill='%2338bdf8'>&gt;AM</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-deep: #0f172a;
@@ -37,31 +39,30 @@
 
         .btn-primary { background: var(--accent-blue); color: var(--bg-deep); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 800; margin-top: 15px; font-size: 0.8rem; text-transform: uppercase; }
 
-        /* GRID LOGIC */
+        /* GRID CONTROLS */
         .span-3 { grid-column: span 3; }
         .span-2 { grid-column: span 2; }
         .row-2 { grid-row: span 2; }
-        #medium-insights { grid-column: 4; grid-row: 1; }
-        #tech-dna { grid-column: 4; grid-row: 2 / 4; }
-        #system-impact { grid-column: 1; grid-row: 2 / 4; }
-        #context-impact { grid-column: 1; grid-row: 4; }
 
-        /* RESTORED SOCIAL CARD STYLING */
-        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 60px; }
-        .social-card { background: rgba(30, 41, 59, 0.8); border: 1px solid var(--border-glow); padding: 12px 24px; border-radius: 12px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-bright); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; transition: 0.3s; backdrop-filter: blur(8px); }
-        .social-card:hover { transform: translateY(-5px); background: var(--accent-blue); color: var(--bg-deep); }
-        .social-card img { height: 20px; filter: invert(1); }
-        .social-card:hover img { filter: invert(0); }
+        /* SPECIFIC TARGETED POSITIONING */
+        .medium-card { grid-column: 4; grid-row: 1; }
+        .dna-card { grid-column: 4; grid-row: 2 / 4; }
+        .impact-card { grid-column: 1; grid-row: 2 / 4; }
+        .context-card { grid-column: 1; grid-row: 4; }
 
-        @media (max-width: 900px) { .bento-grid { grid-template-columns: 1fr; } .span-3, .span-2, .row-2, #medium-insights, #tech-dna, #system-impact, #context-impact { grid-column: span 1 !important; grid-row: auto !important; } .social-links { flex-direction: column; align-items: center; } }
+        @media (max-width: 900px) { .bento-grid { grid-template-columns: 1fr; } .span-3, .span-2, .row-2, .medium-card, .dna-card, .impact-card, .context-card { grid-column: span 1 !important; grid-row: auto !important; } }
     </style>
 </head>
 <body>
+
 <canvas id="graph-canvas"></canvas>
+
 <div class="container">
     <nav>
         <div class="logo-glass">
-            <svg width="100" height="30" viewBox="0 0 100 30"><text x="0" y="22" font-family="JetBrains Mono" font-size="22" font-weight="800" fill="#38bdf8"><tspan fill="#64748b">&gt;</tspan> AM</text></svg>
+            <svg width="100" height="30" viewBox="0 0 100 30">
+                <text x="0" y="22" font-family="JetBrains Mono" font-size="22" font-weight="800" fill="#38bdf8"><tspan fill="#64748b">&gt;</tspan> AM</text>
+            </svg>
         </div>
         <span class="mono">SYSTEM_STATUS: ACTIVE // THE RESEARCH TRIANGLE, NC</span>
     </nav>
@@ -72,89 +73,99 @@
                 <div style="flex: 1; min-width: 300px;">
                     <span class="mono">Senior Lead Software Engineer & Senior IC</span>
                     <h1>Abhijith Mengaram</h1>
-                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-top: 10px; line-height: 1.6;">Building high-concurrency <strong>distributed systems</strong> and high-trust engineering cultures. I bridge technical strategy with organizational growth.</p>
+                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-top: 10px; line-height: 1.6;">
+                        Building high-concurrency <strong>distributed systems</strong> and high-trust engineering cultures. I bridge technical strategy with organizational growth to deliver enterprise-grade excellence.
+                    </p>
                 </div>
-                <div class="photo-wrapper"><img src="assets/images/me.jpg" alt="Abhijith"></div>
+                <div class="photo-wrapper">
+                    <img src="assets/images/me.jpg" alt="Abhijith">
+                </div>
             </div>
         </div>
 
-        <div class="card" id="medium-insights">
+        <div class="card medium-card">
             <h2>Medium Insights</h2>
-            <div style="font-size: 0.8rem; line-height: 1.5;">
-                <a href="https://medium.com/@abhijith.mengaram/when-systems-fail-quietly-jvm-memory-and-engineering-judgment-33435cc9884e" target="_blank" style="text-decoration:none; display:block; margin-bottom:12px;">
-                    <span style="color: var(--text-bright); font-weight: 600;">Systems Failing Quietly →</span><br>
-                    <span class="mono" style="color: var(--accent-blue); font-size: 0.65rem;">JVM & JUDGMENT</span>
+            <div style="font-size: 0.8rem; line-height: 1.6;">
+                <a href="https://medium.com/@abhijith.mengaram/when-systems-fail-quietly-jvm-memory-and-engineering-judgment-33435cc9884e" target="_blank" style="text-decoration:none; display:block; margin-bottom:15px;">
+                    <span style="color: var(--text-bright); font-weight: 600;">When Systems Fail Quietly →</span><br>
+                    <span style="color: var(--accent-blue); font-size: 0.65rem;" class="mono">JVM & MEMORY</span>
                 </a>
-                <a href="https://medium.com/@abhijith.mengaram/when-do-you-really-need-a-data-warehousing-solution-75382b6b5d92" target="_blank" style="text-decoration:none; display:block; margin-bottom:12px;">
-                    <span style="color: var(--text-bright); font-weight: 600;">Data Warehousing →</span><br>
-                    <span class="mono" style="color: var(--accent-blue); font-size: 0.65rem;">STRATEGY</span>
+                <a href="https://medium.com/@abhijith.mengaram/when-do-you-really-need-a-data-warehousing-solution-75382b6b5d92" target="_blank" style="text-decoration:none; display:block; margin-bottom:15px;">
+                    <span style="color: var(--text-bright); font-weight: 600;">Data Warehousing Strategy →</span><br>
+                    <span style="color: var(--accent-blue); font-size: 0.65rem;" class="mono">ARCHITECTURAL DECISION</span>
                 </a>
                 <a href="https://medium.com/@abhijith.mengaram/how-i-solved-a-real-world-load-problem-using-gcp-cloud-run-jobs-8d070b8f057c" target="_blank" style="text-decoration:none; display:block;">
                     <span style="color: var(--text-bright); font-weight: 600;">GCP Cloud Run Jobs →</span><br>
-                    <span class="mono" style="color: var(--accent-blue); font-size: 0.65rem;">LOAD SOLVING</span>
+                    <span style="color: var(--accent-blue); font-size: 0.65rem;" class="mono">LOAD PROBLEM SOLVING</span>
                 </a>
             </div>
         </div>
 
-        <div class="card" id="system-impact">
+        <div class="card impact-card">
             <h2>System Impact</h2>
             <div style="margin-bottom: 20px;">
                 <strong style="font-size: 0.85rem; color: var(--text-bright); display:block;">📉 Latency P99</strong>
-                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Architecting high-availability systems for peak performance.</p>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Architecting high-availability distributed systems for peak performance.</p>
             </div>
             <div style="margin-bottom: 20px;">
                 <strong style="font-size: 0.85rem; color: var(--text-bright); display:block;">🏗️ Modernization</strong>
-                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Decoupling legacy debt with DDD.</p>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Decoupling legacy debt with domain-driven design and scalable architecture.</p>
             </div>
             <div>
                 <strong style="font-size: 0.85rem; color: var(--text-bright); display:block;">🌱 Growth</strong>
-                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Coaching engineers to Lead levels.</p>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top:5px;">Coaching and mentoring engineers to Lead levels through technical excellence.</p>
             </div>
         </div>
 
         <div class="card span-2 row-2">
             <h2>Experience & Delivery</h2>
+            <p style="color: var(--text-dim); font-size: 0.95rem;">Architecting for scale and organizational impact.</p>
             <ul class="tech-list">
-                <li>Technical lead for multiple $200M revenue platforms.</li>
-                <li>Architected systems with 4.5x performance gains.</li>
-                <li>Strategic AI/ML production workflows.</li>
-                <li>Leading the RFC process for microservices.</li>
+                <li>Technical lead for multiple $200M annual revenue platforms.</li>
+                <li>Architected event-driven systems achieving 4.5x performance gains.</li>
+                <li>Strategic integration of AI/ML capabilities for production workflows.</li>
+                <li>Leading the RFC process for cross-functional high-concurrency microservices.</li>
             </ul>
             <a href="resume.pdf" class="btn-primary" target="_blank">View Technical Dossier</a>
         </div>
 
-        <div class="card" id="tech-dna">
+        <div class="card dna-card">
             <h2>Technical DNA</h2>
             <div style="font-size: 0.85rem; line-height: 2.2;">
-                <div><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">LANGUAGES</strong> Java / Go / Python</div>
-                <div><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">CLOUD</strong> GCP / AWS / K8s</div>
-                <div><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">DATA</strong> Kafka / Redis / Mongo</div>
+                <div style="margin-bottom: 15px;"><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">LANGUAGES</strong> Java / Go / Python</div>
+                <div style="margin-bottom: 15px;"><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">CLOUD & INFRA</strong> GCP / AWS / K8s / Terraform / Docker</div>
+                <div style="margin-bottom: 15px;"><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">DATA SYSTEMS</strong> Kafka / Redis / SQL / MongoDB</div>
+                <div><strong style="display:block; font-size: 0.7rem; color: var(--text-dim);">SPECIALIZATION</strong> Distributed Systems / AI/ML / LLM</div>
             </div>
         </div>
 
-        <div class="card" id="context-impact">
+        <div class="card context-card">
             <h2>Context & Impact</h2>
-            <p><span style="color: var(--accent-blue); font-weight: 800;">CERTS:</span> AWS Architect • CKAD</p>
-            <p><span style="color: var(--accent-blue); font-weight: 800;">FACTS:</span> 🏃 13.1 Finisher.</p>
+            <div style="font-size: 0.8rem; line-height: 1.6;">
+                <p style="margin: 0 0 10px 0;"><span style="color: var(--accent-blue); font-weight: 800;">CERTS:</span> CSM • GCP</p>
+                <p style="margin: 0;"><span style="color: var(--accent-blue); font-weight: 800;">FACTS:</span> 🏃 13.1 Finisher. <br>Refactoring former 6-pack (Tech Debt).</p>
+            </div>
         </div>
 
         <div class="card span-2">
             <h2>Leadership Approach</h2>
-            <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.6;">Encouraging technical risks during experimentation to drive 10x gains while maintaining reliability.</p>
+            <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.6;">
+                I foster environments where we move fast and correct—encouraging technical risks during experimentation to drive 10x gains while maintaining bulletproof system reliability.
+            </p>
         </div>
     </main>
 
     <div class="social-links">
         <a href="https://www.linkedin.com/in/abhijith-mengaram/" class="social-card" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="height: 18px; filter: invert(1);">
             <span>LinkedIn</span>
         </a>
         <a href="https://medium.com/@abhijith.mengaram" class="social-card" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968906.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968906.png" alt="Medium" style="height: 18px; filter: invert(1);">
             <span>Medium</span>
         </a>
         <a href="https://github.com/AbhijithMengaram" class="social-card" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="height: 18px; filter: invert(1);">
             <span>GitHub</span>
         </a>
     </div>
@@ -163,7 +174,10 @@
         <p>Built with precision • The Research Triangle, NC • &copy; 2026 Abhijith Mengaram</p>
     </footer>
 </div>
+
 <script>
+    window.onblur = function () { document.title = "Ready to collaborate?"; }
+    window.onfocus = function () { document.title = "Abhijith Mengaram | Lead SE"; }
     const canvas = document.getElementById('graph-canvas'); const ctx = canvas.getContext('2d');
     let particles = [];
     function init() {
