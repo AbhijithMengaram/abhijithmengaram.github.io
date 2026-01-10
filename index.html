@@ -3,139 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijith Mengaram | Lead Software Engineer</title>
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Abhijith Mengaram | Engineering Leader">
+    <meta name="twitter:title" content="Abhijith Mengaram | Lead Software Engineer">
     <meta name="twitter:description" content="Senior Software Engineer & Distributed Systems Architect.">
     <meta name="twitter:image" content="https://abhijithmengaram.com/assets/images/me.jpg">
+    
     <link rel="icon" type="image/png" href="assets/icons/am_logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-red: #d32f2f;
-            --text-dark: #1a1a1a;
-            --text-muted: #52525b;
-            --card-bg: rgba(255, 255, 255, 0.9);
-            --border: rgba(0, 0, 0, 0.05);
+            --text-dark: #0f172a; /* Slate Dark - more premium than black */
+            --text-muted: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --border: rgba(211, 47, 47, 0.1);
         }
 
         body {
             margin: 0;
-            background-color: #fdfdfd;
-            background-attachment: fixed;
+            background-color: #ffffff;
             color: var(--text-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            background-image: 
-                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='1' fill='rgba(211, 47, 47, 0.1)'/%3E%3Ccircle cx='90' cy='90' r='1' fill='rgba(211, 47, 47, 0.1)'/%3E%3Cline x1='10' y1='10' x2='90' y2='90' stroke='rgba(211, 47, 47, 0.05)' stroke-width='0.5'/%3E%3C/svg%3E"),
-                radial-gradient(at 0% 0%, rgba(211, 47, 47, 0.08) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(211, 47, 47, 0.05) 0px, transparent 50%);
+            overflow-x: hidden;
         }
 
-        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-        .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(180px, auto); gap: 20px; }
-        .card { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 24px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .card:hover { transform: translateY(-8px); border-color: var(--primary-red); box-shadow: 0 15px 35px rgba(211, 47, 47, 0.07); }
-        h1 { font-size: 3rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.04em; line-height: 1.1; }
-        h2 { font-size: 1.1rem; color: var(--primary-red); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0; }
-        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--primary-red); }
-        .metric { font-size: 3.5rem; font-weight: 800; color: var(--primary-red); line-height: 1; }
-        .photo-wrapper img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); object-fit: cover; }
-        .hero-flex { display: flex; align-items: center; gap: 30px; }
-        .social-icons { display: flex; gap: 12px; margin-top: 20px; }
-        .social-icons img { width: 40px; transition: 0.3s; }
-        .social-icons img:hover { transform: scale(1.1); }
-        .tag { background: #fff1f1; color: var(--primary-red); padding: 5px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; margin-right: 5px; display: inline-block; margin-bottom: 8px; }
+        /* FIXED GRAPH BACKGROUND */
+        #graph-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7; /* High visibility for the graph */
+            background: radial-gradient(circle at 50% 50%, #fff, #f8f8f8);
+        }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 1; }
+
+        /* LOGO WITH BLURRED BACKGROUND */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* BENTO GRID */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 20px 40px rgba(211, 47, 47, 0.08);
+        }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: 3.2rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.05em; line-height: 1.1; color: var(--text-dark); }
+        h2 { font-size: 1rem; color: var(--primary-red); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 15px; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--primary-red); font-weight: 600; }
+        .metric { font-size: 4rem; font-weight: 800; color: var(--primary-red); line-height: 1; }
+        
+        /* ASSETS */
+        .photo-wrapper img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.1); object-fit: cover; }
+        .hero-flex { display: flex; align-items: center; gap: 40px; }
+        .social-icons { display: flex; gap: 15px; margin-top: 25px; }
+        .social-icons img { width: 38px; height: 38px; filter: grayscale(1); transition: 0.3s; opacity: 0.7; }
+        .social-icons img:hover { filter: grayscale(0); opacity: 1; transform: translateY(-3px); }
+        
+        .tag { background: #fff1f1; color: var(--primary-red); padding: 6px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 10px; display: inline-block; }
+
+        /* GRID LOGIC */
         .span-3 { grid-column: span 3; }
         .span-2 { grid-column: span 2; }
         .row-2 { grid-row: span 2; }
-        .center { text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .center { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
             .bento-grid { grid-template-columns: 1fr; }
             .span-3, .span-2, .row-2 { grid-column: span 1; grid-row: span 1; }
             .hero-flex { flex-direction: column-reverse; text-align: center; }
-        }
-        @media (max-width: 480px) {
-            .metric { font-size: 2.5rem; }
-            h1 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
-    <div id="graph-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.4;"></div>
-    <div class="container">
-        <nav style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-            <img src="assets/icons/am_logo.png" alt="AM Logo" style="height: 40px;">
-            <span class="mono">Research Triangle, NC • EST Timezone</span>
-        </nav>
 
-        <main class="bento-grid">
-            <div class="card span-3">
-                <div class="hero-flex">
-                    <div class="text-side">
-                        <span class="mono">Senior Software Engineer & Leader</span>
-                        <h1>Abhijith Mengaram</h1>
-                        <p>10+ years architecting distributed enterprise systems and guiding global engineering teams. Specialized in cloud-native strategy and <strong>operational excellence</strong>.</p>
-                        <div style="margin-top: 15px;">
-                            <span class="tag">MS Computer Science</span>
-                            <span class="tag">MS Mgmt Info Tech</span>
-                            <span class="tag">Certified Scrum Master®</span>
-                            <span class="tag">Distributed Systems</span>
-                        </div>
-                    </div>
-                    <div class="photo-wrapper">
-                        <img src="assets/images/me.jpg" alt="Abhijith Mengaram">
+<div id="graph-canvas"></div>
+
+<div class="container">
+    <nav>
+        <div class="logo-glass">
+            <img src="assets/icons/am_logo.png" alt="AM Logo" style="height: 32px;">
+        </div>
+        <span class="mono">Cary, NC • EST Timezone</span>
+    </nav>
+
+    <main class="bento-grid">
+        <div class="card span-3">
+            <div class="hero-flex">
+                <div class="text-side">
+                    <span class="mono">Senior Software Engineer & Leader</span>
+                    <h1>Abhijith Mengaram</h1>
+                    <p style="font-size: 1.1rem; color: var(--text-muted);">10+ years architecting distributed enterprise systems and guiding global engineering teams. Specialized in cloud-native strategy and <strong>operational excellence</strong>.</p>
+                    <div style="margin-top: 20px;">
+                        <span class="tag">MS Computer Science</span>
+                        <span class="tag">MS Mgmt Info Tech</span>
+                        <span class="tag">Distributed Systems</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="card center">
-                <span class="metric">5</span>
-                <p style="font-weight: 700; margin-top: 5px;">Engineers Promoted</p>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Successfully coached engineers into Senior and Lead roles.</p>
-            </div>
-
-            <div class="card span-2 row-2">
-                <h2>Engineering Management</h2>
-                <p>Managed global engineering teams across multiple time zones, aligning technical strategy with product roadmaps.</p>
-                <p><strong>Impact Highlights:</strong></p>
-                <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
-                    <li>Lead engineering for underwriting platform supporting <strong>$100M+ annual revenue</strong>.</li>
-                    <li>Achieved <strong>4.5x performance gain</strong> in cloud workloads, optimizing GCP compute spend.</li>
-                    <li>Reduced system downtime by 30% via modernized architecture and observability.</li>
-                </ul>
-                <a href="assets/resume/test_Abhijith_Mengaram_2025.pdf" class="tag" style="background: var(--primary-red); color: white; padding: 10px 20px; text-decoration: none; display: inline-block;">View Full Strategy Resume →</a>
-            </div>
-
-            <div class="card center">
-                <span class="metric">45%</span>
-                <p style="font-weight: 700; margin-top: 5px;">Latency Reduction</p>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Optimized critical APIs and batch jobs for Ford Motor Co.</p>
-            </div>
-
-            <div class="card center">
-                <span class="metric">50%</span>
-                <p style="font-weight: 700; margin-top: 5px;">Tech Debt Reduction</p>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Strategic refactoring to enable faster feature delivery.</p>
-            </div>
-
-            <div class="card span-2">
-                <h2>Connect & Insights</h2>
-                <p>Sharing expertise on Distributed Systems, LLM orchestration, and Team Leadership.</p>
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/abhijith-mengaram" target="_blank"><img src="assets/icons/linkedin_logo.svg" alt="LinkedIn"></a>
-                    <a href="https://github.com/AbhijithMengaram" target="_blank"><img src="assets/icons/github_logo.svg" alt="GitHub"></a>
-                    <a href="https://medium.com/@abhijithmengaram" target="_blank"><img src="assets/icons/medium_logo.svg" alt="Medium"></a>
+                <div class="photo-wrapper">
+                    <img src="assets/images/me.jpg" alt="Abhijith Mengaram">
                 </div>
             </div>
-        </main>
+        </div>
 
-        <footer style="text-align: center; margin-top: 60px; font-size: 0.85rem; color: var(--text-muted);">
-            <p>&copy; 2026 Abhijith Mengaram. MS in CS, MS in Management IT. Architected for Scale.</p>
-        </footer>
-    </div>
+        <div class="card center">
+            <span class="metric">5</span>
+            <p style="font-weight: 700; margin: 10px 0 5px;">Engineers Promoted</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Mentored talent into Lead roles.</p>
+        </div>
 
-    <script>
+        <div class="card span-2 row-2">
+            <h2>Engineering Management</h2>
+            <p>Managed global engineering teams, aligning technical strategy with high-stakes product roadmaps.</p>
+            <p><strong>Impact Highlights:</strong></p>
+            <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+                <li>Leading engineering for underwriting platform supporting <strong>$100M+ annual revenue</strong>.</li>
+                <li>Achieved <strong>4.5x performance gain</strong> in cloud workloads, optimizing GCP compute spend.</li>
+                <li>Reduced system downtime by 30% via modernized observability.</li>
+            </ul>
+            <a href="assets/resume/test_Abhijith_Mengaram_2025.pdf" class="tag" style="background: var(--primary-red); color: white; padding: 12px 24px; text-decoration: none; margin-top: 20px;">Download Strategy Resume →</a>
+        </div>
+
+        <div class="card center">
+            <span class="metric">45%</span>
+            <p style="font-weight: 700; margin: 10px 0 5px;">Latency Reduction</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Optimized critical APIs for scale.</p>
+        </div>
+
+        <div class="card center">
+            <span class="metric">50%</span>
+            <p style="font-weight: 700; margin: 10px 0 5px;">Tech Debt Reduction</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Strategic refactoring for speed.</p>
+        </div>
+
+        <div class="card span-2">
+            <h2>Connect & Insights</h2>
+            <p style="color: var(--text-muted);">Discussing Distributed Systems and Team Leadership.</p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/abhijith-mengaram" target="_blank"><img src="assets/icons/linkedin_logo.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/AbhijithMengaram" target="_blank"><img src="assets/icons/github_logo.svg" alt="GitHub"></a>
+                <a href="https://medium.com/@abhijithmengaram" target="_blank"><img src="assets/icons/medium_logo.svg" alt="Medium"></a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; margin-top: 80px; padding-bottom: 40px; font-size: 0.85rem; color: var(--text-muted);">
+        <p>&copy; 2026 Abhijith Mengaram • MS CS, MS MIT • Architected for Scale</p>
+    </footer>
+</div>
+
+<script>
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     document.getElementById('graph-canvas').appendChild(canvas);
@@ -144,18 +206,17 @@
     function init() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        particles = Array.from({ length: 50 }, () => ({
+        // Adjusted density for better visibility
+        particles = Array.from({ length: 60 }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4
         }));
     }
     
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = 'rgba(211, 47, 47, 0.15)';
-        ctx.fillStyle = 'rgba(211, 47, 47, 0.3)';
         
         particles.forEach((p, i) => {
             p.x += p.vx; p.y += p.vy;
@@ -163,14 +224,17 @@
             if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
             
             ctx.beginPath();
-            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+            ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(211, 47, 47, 0.4)'; // Darker dots
             ctx.fill();
     
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                if (dist < 150) {
+                if (dist < 180) {
                     ctx.beginPath();
+                    ctx.lineWidth = 1; // Thicker lines
+                    ctx.strokeStyle = `rgba(211, 47, 47, ${0.15 * (1 - dist/180)})`;
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
                     ctx.stroke();
@@ -182,6 +246,6 @@
     
     window.addEventListener('resize', init);
     init(); draw();
-    </script>
+</script>
 </body>
 </html>
